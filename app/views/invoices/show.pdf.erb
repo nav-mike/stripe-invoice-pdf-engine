@@ -1,0 +1,168 @@
+
+<!-- header -->
+<div class="row header info-block">
+  <div class="col-xs-6">
+    <!-- logo -->
+    <div class="logo">
+      <%= invoice_logo_tag %>
+    </div>
+  </div>
+
+  <div class="col-xs-6 text-right">
+    Invoice
+  </div>
+</div>
+
+<!-- invoice attributes -->
+<div class="row info-block">
+  <div class="col-xs-7">
+    <div class="row">
+      <div class="col-xs-6">
+        <b>
+          Payable to
+        </b>
+
+        <div>
+          <%= @invoice.plan_name %>
+        </div>
+      </div>
+
+      <div class="col-xs-6">
+        <b>
+          Bill to
+        </b>
+
+        <div>
+          <%= @invoice.customer_name %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-5 text-right">
+    <div class="row">
+      <div class="col-xs-6">
+        Invoice number
+      </div>
+
+      <div class="col-xs-6">
+        <b>
+          <%= @invoice.number %>
+        </b>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6">
+        Date of issue
+      </div>
+
+      <div class="col-xs-6">
+        <b>
+          <%= @invoice.issue_date %>
+        </b>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6">
+        Date due
+      </div>
+
+      <div class="col-xs-6">
+        <b>
+          <%= @invoice.due_date %>
+        </b>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- invoice main price -->
+<div class="row main-price info-block">
+  <div class="container-fluid">
+    <%= @invoice.total %> due <%= @invoice.date %>
+  </div>
+</div>
+
+<!-- table -->
+<div class="info-block">
+  <table class="table table-responsive">
+    <thead>
+      <tr class="bordered">
+        <th>Description</th>
+        <th>Qty</th>
+        <th>Unit price</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- dates -->
+      <tr>
+        <td colspan="4"  class="chalky text-uppercase">
+          <%= @invoice.description %>
+        </td>
+      </tr>
+
+      <!-- item in invoice -->
+      <!-- if tr is last, then `bordered` class is added -->
+      <tr class="info bordered non-top-bordered">
+        <td>
+          <%= @invoice.plan_name %>
+        </td>
+
+        <td class="chalky">
+          <%= @invoice.quantity %>
+        </td>
+
+        <td class="chalky">
+          <%= @invoice.price %>
+        </td>
+
+        <td>
+          <%= @invoice.amount %>
+        </td>
+      </tr>
+
+      <!-- total rows -->
+      <tr>
+        <td colspan="2" class="non-top-bordered"></td>
+
+        <td class="chalky">
+          Subtotal
+        </td>
+
+        <td>
+          <%= @invoice.subtotal %>
+        </td>
+      </tr>
+
+      <% if @invoice.coupon.present? %>
+        <tr>
+          <td colspan="2" class="non-top-bordered"></td>
+
+          <td class="bordered chalky">
+            <%= @invoice.coupon %>
+          </td>
+
+          <td class="bordered">
+            <%= @invoice.discount %>
+          </td>
+        </tr>
+      <% end %>
+
+      <tr>
+        <td colspan="2" class="non-top-bordered"></td>
+
+        <td class="info">
+          Amount due
+        </td>
+
+        <td class="info">
+          <%= @invoice.total %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

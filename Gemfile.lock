@@ -11,7 +11,7 @@ GIT
 PATH
   remote: .
   specs:
-    stripe_invoice_pdf_engine (0.1.0)
+    stripe_invoice_pdf_engine (0.0.1)
       rails (>= 4.2.1)
 
 GEM
@@ -158,4 +158,4 @@ DEPENDENCIES
   stripe_invoice_pdf_engine!
 
 BUNDLED WITH
-   1.15.4
+   1.16.2

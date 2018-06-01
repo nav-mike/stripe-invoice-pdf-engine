@@ -2,10 +2,10 @@
 
 module StripeInvoicePdfEngine
   module StripeInvoicePdfEngineHelper
-    def render_invoice(invoice, _options = {})
+    def render_invoice(invoice, options = {})
       render pdf: "Invoice-#{invoice.number}",
-             template: 'stripe_invoice_pdf_engine/invoices/show.pdf.erb',
-             layout: 'stripe_invoice_pdf_engine/application.html',
+             template: options[:template] || StripeInvoicePdfEngine.config.template,
+             layout: options[:layout] || StripeInvoicePdfEngine.config.layout,
              show_as_html: show_as_html?
     end
 

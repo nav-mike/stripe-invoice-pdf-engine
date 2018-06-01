@@ -1,4 +1,7 @@
 # StripeInvoicePdfEngine
+
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/nav-mike/stripe-invoice-pdf-engine.svg?columns=all)](https://waffle.io/nav-mike/stripe-invoice-pdf-engine)
+
 Short description and motivation.
 
 ## Usage

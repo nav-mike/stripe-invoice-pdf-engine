@@ -26,7 +26,7 @@ $ rails generate stripe_invoice_pdf_engine
 
 Configure [`stripe_invoice_pdf`](https://github.com/nav-mike/stripe-invoice-pdf/blob/master/README.md#installation).
 
-And add engine to `config/routes.rb`
+This task adds engine url to `config/routes.rb`
 
 ```ruby
 mount StripeInvoicePdfEngine::Engine => '/stripe_invoice_pdf_engine'

@@ -7,6 +7,10 @@ if defined?(Rails)
     def copy_initializer
       copy_file 'stripe_invoice_pdf_engine.rb', 'config/initializers/stripe_invoice_pdf_engine.rb'
 
+      inject_into_file 'config/routes.rb', after: 'Rails.application.routes.draw do' do
+        "\n  mount StripeInvoicePdfEngine::Engine => '/stripe_invoice_pdf_engine'\n"
+      end
+
       generate 'stripe_invoice_pdf'
     end
   end

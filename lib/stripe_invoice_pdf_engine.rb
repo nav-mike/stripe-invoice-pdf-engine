@@ -2,6 +2,9 @@
 
 require 'stripe_invoice_pdf_engine/engine'
 require 'stripe_invoice_pdf_engine/config'
+require 'stripe_invoice_pdf_engine/railtie'
+require 'stripe_invoice_pdf_engine/version'
+
 require 'stripe_invoice_pdf'
 
 module StripeInvoicePdfEngine

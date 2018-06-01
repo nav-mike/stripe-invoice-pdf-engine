@@ -8,15 +8,16 @@
 #
 # https://github.com/nav-mike/stripe-invoice-pdf/blob/master/README.md
 
-StripeInvoicePdfEngine::Config = {
+StripeInvoicePdfEngine.configure do |config|
   # Define your Stripe api_key:
   #
-  # api_key: 'sk_...',
+  # config.api_key = 'sk_...'
   #
   # Add your logo here.
   #
-  # company_logo: 'logo.png',
+  # config.company_logo = 'logo.png'
   #
   # Define pdf layout
-  # layout = 'stripe_invoice_pdf_engine/application.html'
-}
+  #
+  config.layout = 'stripe_invoice_pdf_engine/application.html'
+end

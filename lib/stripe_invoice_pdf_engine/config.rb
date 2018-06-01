@@ -19,6 +19,11 @@ module StripeInvoicePdfEngine
         'stripe_invoice_pdf_engine/application.html'
     end
 
+    def template
+      @options[:template] ||
+        'stripe_invoice_pdf_engine/invoices/show.pdf.erb'
+    end
+
     def api_key=(key)
       @options[:api_key] = key
     end
@@ -29,6 +34,10 @@ module StripeInvoicePdfEngine
 
     def layout=(path)
       @options[:layout] = path
+    end
+
+    def template=(template)
+      @options[:template] = template
     end
   end
 end

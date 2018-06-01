@@ -20,4 +20,8 @@ StripeInvoicePdfEngine.configure do |config|
   # Define pdf layout
   #
   config.layout = 'stripe_invoice_pdf_engine/application.html'
+  #
+  # Define pdf template
+  #
+  # config.template = 'stripe_invoice_pdf_engine/invoices/show.pdf.erb'
 end

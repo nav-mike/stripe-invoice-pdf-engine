@@ -1,4 +1,6 @@
-# Stripe Invoice PDF Engine
+# StripeInvoicePdfEngine
+
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/nav-mike/stripe-invoice-pdf-engine.svg?columns=all)](https://waffle.io/nav-mike/stripe-invoice-pdf-engine)
 
 This is a engine wrapper for [Stripe Invoice PDF](https://github.com/nav-mike/stripe-invoice-pdf) gem.
 

@@ -124,6 +124,27 @@
           <%= @invoice.amount %>
         </td>
       </tr>
+      
+      <!-- Tax -->
+      <% if @invoice.tax.present? %>
+        <tr class="info bordered non-top-bordered">
+          <td>
+            <%= @invoice.tax.description %>
+          </td>
+  
+          <td class="chalky">
+            <%= @invoice.tax.quantity %>
+          </td>
+  
+          <td class="chalky">
+            <%= @invoice.tax.price %>
+          </td>
+  
+          <td>
+            <%= @invoice.tax.amount %>
+          </td>
+        </tr>
+      <% end %>
 
       <!-- total rows -->
       <tr>

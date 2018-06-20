@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/nav-mike/stripe-invoice-pdf.git
-  revision: b744edecc9b9627a7c80ebfab9b1a38cfe3281d0
+  revision: 3942d5196bd8412392a55cc10f043cad554fa2e9
   branch: engine
   specs:
     stripe_invoice_pdf (0.0.1)

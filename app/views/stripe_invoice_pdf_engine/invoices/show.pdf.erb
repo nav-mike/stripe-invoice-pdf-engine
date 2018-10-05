@@ -81,7 +81,7 @@
 <!-- invoice main price -->
 <div class="row main-price info-block">
   <div class="container-fluid">
-    <%= @invoice.total %> due <%= @invoice.date %>
+    <%= @invoice.total %> due <%= @invoice.due_date %>
   </div>
 </div>
 
@@ -124,22 +124,22 @@
           <%= @invoice.amount %>
         </td>
       </tr>
-      
+
       <!-- Tax -->
       <% if @invoice.tax.present? %>
         <tr class="info bordered non-top-bordered">
           <td>
             <%= @invoice.tax.description %>
           </td>
-  
+
           <td class="chalky">
             <%= @invoice.tax.quantity %>
           </td>
-  
+
           <td class="chalky">
             <%= @invoice.tax.price %>
           </td>
-  
+
           <td>
             <%= @invoice.tax.amount %>
           </td>

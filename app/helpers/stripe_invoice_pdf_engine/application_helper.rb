@@ -19,5 +19,11 @@ module StripeInvoicePdfEngine
       raise 'Insert SVG here!' unless block_given?
       yield
     end
+
+    def logo_svg_file(name)
+      path = "#{Rails.root}/app/assets/images/#{name}.svg"
+      return File.read(path).html_safe if File.exist?(path)
+      '(not found)'
+    end
   end
 end

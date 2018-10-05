@@ -2,7 +2,7 @@
 
 require 'stripe'
 
-class StripeInvoicePdfEngine
+module StripeInvoicePdfEngine
   class Invoice
 
     include ActionView::Helpers::NumberHelper

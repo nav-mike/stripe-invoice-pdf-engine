@@ -9,7 +9,7 @@ module StripeInvoicePdfEngine
 
     def initialize(invoice_id)
       Stripe.api_key ||= StripeInvoicePdfEngine.config.api_key
-      @invoice = Stripe::Invoice.retrieve id
+      @invoice = Stripe::Invoice.retrieve invoice_id
     end
 
     # public interface

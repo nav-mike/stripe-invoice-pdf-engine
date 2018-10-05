@@ -11,7 +11,7 @@ if defined?(Rails)
         "\n  mount StripeInvoicePdfEngine::Engine => '/stripe_invoice_pdf_engine'\n"
       end
 
-      generate 'stripe_invoice_pdf'
+      generate 'wicked_pdf'
     end
   end
 end

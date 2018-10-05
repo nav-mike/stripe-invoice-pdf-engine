@@ -15,5 +15,3 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
-
-gem 'stripe_invoice_pdf', git: 'https://github.com/nav-mike/stripe-invoice-pdf.git', branch: 'engine'
